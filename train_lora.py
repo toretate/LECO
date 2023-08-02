@@ -290,6 +290,7 @@ def train(
             network.save_weights(
                 save_path / f"{config.save.name}_{i}steps.safetensors",
                 dtype=save_weight_dtype,
+                metadata=metadata,
             )
 
     print("Saving...")
@@ -297,6 +298,7 @@ def train(
     network.save_weights(
         save_path / f"{config.save.name}_last.safetensors",
         dtype=save_weight_dtype,
+        metadata=metadata,
     )
 
     del (
