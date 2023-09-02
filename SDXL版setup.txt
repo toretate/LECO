@@ -1,0 +1,36 @@
+分かってる人向け説明になってるのでそのうち更新する？
+
+XL LECO を 3060 12G 環境で作成できてます
+
+■LECOの学習環境を用意（前から作ってた人はできてる）
+1. LECO のリポジトリを clone する
+2. mainブランチをcheckout(たぶん最初からmainブランチになってるはず)
+
+■SDXL用コードを入れる
+3. sdxlブランチをマージ
+
+■以下、civitai の XL版 LECO解説を元に解説
+  CIVITAIの解説
+  https://civitai.com/models/129028/leco-lora-train8gb-sdxl-lora-train24gb
+
+・要点
+1. ↑にある zip ファイルをダウンロードして展開。bitsandbytes_windows を自分の LECO フォルダに配置する
+こんな感じのフォルダ構成
+  bitsandbytes_windows
+  examples
+  images
+  test
+  config_util.py
+  debug_util.py
+  flush.py
+  :
+  install.ps1
+  :
+  train_leco.ps1
+  :
+  
+2. install.ps1 を実行する
+　　→ ↑の解説zipにある install_cn_qinglong_leco.ps1 は中国国内向け。一般だと install.ps1 でOK
+　　一応同じファイルを配置しときました
+3. train_leco.ps1 を実行する( 中の config_file を実行する config ファイルに変更が必要 )
+　　↑の快絶zipにある train_leco.ps1 とほぼ同じものを配置しときました
