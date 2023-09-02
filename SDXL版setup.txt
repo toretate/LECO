@@ -6,6 +6,12 @@ XL LECO を 3060 12G 環境で作成できてます
 1. LECO のリポジトリを clone する
 2. mainブランチをcheckout(たぶん最初からmainブランチになってるはず)
 
+■Python 3.10 を入れる（必須）
+3.10 が必須だそうです（3.8だとエラーになるそうで）
+
+> tuple[CLIPTokenizer, CLIPTextModel, UNet2DConditionModel,]:
+TypeError: 'type' object is not subscriptable
+
 ■SDXL用コードを入れる
 3. sdxlブランチをマージ
 
